@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\DBUser;
 
 class SiteController extends Controller
 {
@@ -77,6 +78,8 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            $user = DBUser::findOne(Yii::$app->user->id);
+            Yii::$app->session->set('nome',$user->nome);
             return $this->goBack();
         }
 

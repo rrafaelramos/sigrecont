@@ -1,5 +1,7 @@
 <?php
 
+use app\models\DBUser;
+use app\models\User;
 use yii\bootstrap\Dropdown;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
@@ -77,7 +79,9 @@ use kartik\datecontrol\Module;
         ]
     ]); ?>
 
-    <?= $form->field($model, 'usuario_fk')->textInput() ?>
+    /* Busca pelo id do usuário Logado, o nome do usuário e apresenta no formulário*/
+    <?= $form->field($model, 'usuario_fk')->dropDownList(ArrayHelper::map(DBUser::find()->where(['nome' => yii::$app->session])
+    ->all(), 'id','nome'));?>
 
     <div class="form-group">
         <?= Html::submitButton('Salvar', ['class' => 'btn btn-success']) ?>

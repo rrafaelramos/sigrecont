@@ -5,6 +5,9 @@
 $this->title = 'SIGRECONT';
 ?>
 <div class="site-index">
+    <?php
+        echo Yii::$app->user->getId();
+    ?>
 
     <div class="jumbotron">
         <h1>Congratulations!</h1>
