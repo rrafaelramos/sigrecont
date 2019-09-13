@@ -43,6 +43,7 @@ use app\themes\adminLTE\components\ThemeNav;
                       ['label'=>Yii::t('app','MAIN NAVIGITION'), 'options'=>['class'=>'header']],
                       ['label' => ThemeNav::link('Início', 'fa fa-dashboard'), 'url' => ['site/index'], 'visible'=>!Yii::$app->user->isGuest],
                       ['label' => ThemeNav::link('Cadastrar Cliente','glyphicon glyphicon-plus'), 'url' => ['clienteavulso/create'], 'visible'=>!Yii::$app->user->isGuest],
+                      ['label' => ThemeNav::link('Cadastrar Empresa','glyphicon glyphicon-plus'), 'url' => ['empresa/create'], 'visible'=>!Yii::$app->user->isGuest],
                   ],
                 ]);
             ?>
