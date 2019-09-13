@@ -78,8 +78,12 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            $user = DBUser::findOne(Yii::$app->user->id);
-            Yii::$app->session->set('nome',$user->nome);
+
+            $usuario = DBUser::findOne(Yii::$app->user->id);
+
+            Yii::$app->session->set('nome', $usuario->nome);
+            Yii::$app->session->set('id', $usuario->id);
+
             return $this->goBack();
         }
 

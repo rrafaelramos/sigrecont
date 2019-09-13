@@ -79,7 +79,6 @@ use kartik\datecontrol\Module;
         ]
     ]); ?>
 
-    /* Busca pelo id do usuário Logado, o nome do usuário e apresenta no formulário*/
     <?= $form->field($model, 'usuario_fk')->dropDownList(ArrayHelper::map(DBUser::find()->where(['nome' => yii::$app->session])
     ->all(), 'id','nome'));?>
 
