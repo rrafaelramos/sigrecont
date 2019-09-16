@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "61ce25b980fd5cc4d7e032d4b490a3a4",
+    "content-hash": "3a85a1f77b5200a60b21000fd880401d",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -34,7 +34,7 @@
                     "email": "abdullah@almsaeedstudio.com"
                 }
             ],
-            "description": "AdminLTE - admin control panel and dashboard that's based on Bootstrap 3",
+            "description": "AdminLTE - admin control panel and dashboard that's based on Bootstrap7 3",
             "homepage": "https://adminlte.io/",
             "keywords": [
                 "JS",
@@ -410,16 +410,16 @@
         },
         {
             "name": "kartik-v/bootstrap-fileinput",
-            "version": "v5.0.5",
+            "version": "v5.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
-                "reference": "18cb677b6f629087513dc92cb2551353cf3d9181"
+                "reference": "97fbfb5b16a3035c79534d5bd8a1d9bf4f76b1c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/18cb677b6f629087513dc92cb2551353cf3d9181",
-                "reference": "18cb677b6f629087513dc92cb2551353cf3d9181",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/97fbfb5b16a3035c79534d5bd8a1d9bf4f76b1c5",
+                "reference": "97fbfb5b16a3035c79534d5bd8a1d9bf4f76b1c5",
                 "shasum": ""
             },
             "type": "library",
@@ -459,7 +459,7 @@
                 "progress",
                 "upload"
             ],
-            "time": "2019-08-23T05:18:53+00:00"
+            "time": "2019-09-11T18:05:56+00:00"
         },
         {
             "name": "kartik-v/bootstrap-star-rating",
@@ -1828,6 +1828,50 @@
                 "yii2"
             ],
             "time": "2019-09-03T03:11:11+00:00"
+        },
+        {
+            "name": "meysampg/yii2-treeview",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/meysampg/yii2-treeview.git",
+                "reference": "5e26bfed55bcae2e57f3a7be768fc2a7d026e077"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/meysampg/yii2-treeview/zipball/5e26bfed55bcae2e57f3a7be768fc2a7d026e077",
+                "reference": "5e26bfed55bcae2e57f3a7be768fc2a7d026e077",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2-bootstrap": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "meysampg\\treeview\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Meysam P.G.",
+                    "email": "p.g.meysam@gmail.com"
+                }
+            ],
+            "description": "A Bootstrap Treeview Generator for AdminLte Sidebar",
+            "keywords": [
+                "AdminLTE",
+                "extension",
+                "generator",
+                "sidebar",
+                "treeview",
+                "yii2"
+            ],
+            "time": "2016-10-24T08:25:19+00:00"
         },
         {
             "name": "rmrevin/yii2-fontawesome",
