@@ -19,12 +19,16 @@ use kartik\datecontrol\Module;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'cpf')->widget(\yii\widgets\MaskedInput::className(),[
-        'mask' => '999.999.999-99'
+        'mask' => '999.999.999-99',
+        'clientOptions' => ['removeMaskOnSubmit' => true]
     ]) ?>
 
     <?= $form->field($model, 'nome')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'telefone')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'telefone')->widget(\yii\widgets\MaskedInput::className(),[
+        'mask' => '(99) 9 9999-9999',
+        'clientOptions' => ['removeMaskOnSubmit' => true]
+    ]) ?>
 
     <?= $form->field($model, 'numero')->textInput() ?>
 
@@ -35,7 +39,8 @@ use kartik\datecontrol\Module;
     <?= $form->field($model, 'cidade')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'cep')->widget(\yii\widgets\MaskedInput::className(),[
-        'mask' => '99999-999'
+        'mask' => '99.999-999',
+        'clientOptions' => ['removeMaskOnSubmit' => true]
     ]) ?>
 
     <?= $form->field($model, 'uf')->dropDownList(['prompt' => 'Selecione um Estado',

@@ -1,4 +1,6 @@
 <?php
+
+use meysampg\treeview\Treeview;
 use yii\helpers\Html;
 use yii\widgets\Menu;
 use yii\widgets\Breadcrumbs;

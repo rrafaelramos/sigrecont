@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Clienteavulso', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Cadastrar Cliente Avulso', ['create'], ['class' => 'btn btn-success']) ?>
 
     </p>
 
@@ -27,11 +27,17 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'cpf',
+            //'id',
+            ['attribute' => 'cpf',
+                'format' => 'html',
+                'value' => function($model) {
+                    return preg_replace('/^(\d{3})(\d{3})(\d{3})(\d{2})$/', '${1}.${2}.${3}-${4}', $model->cpf);
+                },
+            ],
+
             'nome',
-            'telefone',
-            'numero',
+            //'telefone',
+            //'numero',
             //'rua',
             //'bairro',
             //'cidade',

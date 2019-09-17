@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Clienteavulso */
 
-$this->title = $model->id;
+$this->title = $model->nome;
 $this->params['breadcrumbs'][] = ['label' => 'Clienteavulsos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -29,21 +29,30 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
-            'cpf',
+            //'id',
+            [
+                'attribute' => 'cpf',
+                'value' => preg_replace('/^(\d{3})(\d{3})(\d{3})(\d{2})$/', '${1}.${2}.${3}-${4}', $model->cpf),
+            ],
             'nome',
-            'telefone',
+            [
+                    'attribute' => 'telefone',
+                'value' => preg_replace('/^(\d{2})(\d{1})(\d{4})(\d{4})$/', '(${1}) ${2} ${3}-${4}', $model->telefone),
+            ],
             'numero',
             'rua',
             'bairro',
             'cidade',
-            'cep',
+            [
+                'attribute' => 'cep',
+                'value' => preg_replace('/^(\d{2})(\d{3})(\d{3})$/', '${1}.${2}-${3}', $model->cep),
+            ],
             'uf',
             'rotina',
             ['attribute' => 'datanascimento',
                 'format' => ['date', 'php:d/m/Y'],
             ],
-            'usuario_fk',
+            //'usuario_fk',
         ],
     ]) ?>
 
