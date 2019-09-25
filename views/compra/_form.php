@@ -27,7 +27,7 @@ use yii\widgets\ActiveForm;
         'widgetOptions' => [
             'pluginOptions' => [
                 'autoclose' => true
-            ]
+             ]
         ],
         'language' => 'pt-BR'
     ]); ?>
