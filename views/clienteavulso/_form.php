@@ -79,13 +79,16 @@ use kartik\datecontrol\Module;
         'type'=>DateControl::FORMAT_DATE,
         'widgetOptions' => [
             'pluginOptions' => [
-                'autoclose' => true
+                'autoclose' => true,
+                'format' => 'php:d/m/Y'
             ]
-        ]
+        ],
+        'language' => 'pt-BR'
     ]); ?>
 
     <?= $form->field($model, 'usuario_fk')->dropDownList(ArrayHelper::map(DBUser::find()->where(['nome' => yii::$app->session])
     ->all(), 'id','nome'));?>
+
 
     <div class="form-group">
         <?= Html::submitButton('Salvar', ['class' => 'btn btn-success']) ?>

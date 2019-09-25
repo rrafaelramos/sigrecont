@@ -88,3 +88,16 @@ create table caixa(
 	saldo float,
 	primary key (id)
 );
+
+create table rotina(
+	id int auto_increment,
+	nome varchar(200),
+	repeticao int not null,
+	doc_entrega varchar(200),
+	doc_busca varchar(200),
+	data_entrega DATE,
+	data_aviso DATE,
+	informacao varchar(500),
+	msg_aviso varchar(500),
+	primary key (id)
+);

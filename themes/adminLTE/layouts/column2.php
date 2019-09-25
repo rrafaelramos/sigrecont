@@ -32,6 +32,7 @@ use app\themes\adminLTE\components\ThemeNav;
 
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <?php echo Menu::widget([
+
                 'encodeLabels'=>false,
                 'options' => [
                     'class' => 'sidebar-menu'
