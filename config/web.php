@@ -9,8 +9,6 @@ $config = [
     'id' => '',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'layout'=>'column2',
-    'layoutPath'=>'@app/themes/adminLTE/layouts',
     'timeZone' => 'America/Sao_Paulo',
     'language' => 'pt-br',
     'aliases' => [
@@ -24,15 +22,6 @@ $config = [
             'thousandSeparator' => ' ',
             'currencyCode' => 'pt-br',
        ],
-            'view' => [
-                'theme' => [
-                    'pathMap' => [
-                        '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app'
-                    ],
-                ],
-            ],
-
-
 
 /*       'authManager' => [
         'class' => 'yii\rbac\PhpManager', // or use 'yii\rbac\DbManager'
@@ -111,8 +100,6 @@ $config = [
             ],
         ],
         ],
-
-
     'params' => $params,
 ];
 

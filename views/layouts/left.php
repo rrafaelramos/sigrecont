@@ -32,15 +32,24 @@
                 'items' => [
                     ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
-                    ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
+                    ['label' => 'Caixa',
+                        'icon' => 'dashboard',
+                        'url' => '#',
+                        'items' => [
+                            ['label' => 'Compra', 'icon' => 'fa fa-money', 'url' => '/compra/create'],
+                            ['label' => 'Venda', 'icon' => '', 'url' => '/compra']
+                        ],
+                    ],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [
-                        'label' => 'Some tools',
+                        'label' => 'Cadastrar',
                         'icon' => 'share',
                         'url' => '#',
                         'items' => [
-                            ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii'],],
-                            ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug'],],
+                            ['label' => 'Cliente avulso', 'icon' => '', 'url' => ['/clienteavulso/create'],],
+                            ['label' => 'Rotina', 'icon' => '', 'url' => ['/rotina/create'],],
+                            ['label' => 'Empresa', 'icon' => '', 'url' => ['/empresa/create'],],
+                            ['label' => 'Serviço', 'icon' => '', 'url' => ['/servico/create'],],
                             [
                                 'label' => 'Level One',
                                 'icon' => 'circle-o',
